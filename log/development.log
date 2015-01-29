@@ -155,3 +155,30 @@ Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-28 17:13:36 
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-28 17:13:36 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-28 17:38:51 -0800
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 219ms (Views: 183.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2015-01-28 17:38:52 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-28 17:38:52 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-28 17:38:52 -0800
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2015-01-28 17:38:52 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-28 17:38:52 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-28 17:38:52 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-28 17:38:52 -0800
