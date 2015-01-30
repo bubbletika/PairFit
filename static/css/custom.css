@@ -7,6 +7,10 @@ a.active {
     color: #18bc9c;
 }
 
+small {
+    color: #333;
+}
+
 h1,
 h2,
 h3,
@@ -43,6 +47,11 @@ h6 {
 .jumbotron h1 {
     margin-top: 10%;
     color: #fff;
+    display: block;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 2em;
+    font-weight: 700;
 }
 
 header {
@@ -139,7 +148,7 @@ header .intro-text .skills {
 }
 
 section {
-    padding: 100px 0;
+    padding: 50px 0; 
 }
 
 section h2 {
@@ -147,9 +156,13 @@ section h2 {
     font-size: 3em;
 }
 
+section h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+}
 section.success {
     color: #fff;
-    background: #ED9075;
+    background: #999;
 }
 
 @media(max-width:767px) {
@@ -160,4 +173,13 @@ section.success {
     section.first {
         padding-top: 75px;
     }
+}
+
+.panel {
+    background: 0 0;
+    margin-top: 10px;
+}
+
+.panel-body small {
+    color: #333;
 }
