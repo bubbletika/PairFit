@@ -182,3 +182,18 @@ section.success {
 .panel-body small {
     color: #333;
 }
+
+.right-border {
+    border-right: solid;
+}
+
+.left-border {
+    border-left: solid;
+}
+
+@media(min-width: 768px) {
+    .right-border,
+    .left-border {
+        border: none;
+    }
+}
