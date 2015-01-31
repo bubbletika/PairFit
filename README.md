@@ -1,4 +1,2 @@
-lab3
+PairFit
 ====
-
-Lab 3 for Intro HCI: client-side interactivity
