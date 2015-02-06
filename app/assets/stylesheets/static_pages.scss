@@ -1,0 +1,145 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+  padding: 10px;
+}
+
+div.col-cont {
+  width: 100%;
+  height: 100%;
+  //background-color: lightgray;
+  
+  div.col {
+    text-align: center;
+    h1 {
+      text-align: center;
+    }
+    width: 50%;
+    display: inline-block;
+  }
+  
+  div.col#left {
+    h1 {
+      color: red;
+    }
+    height: 100%;
+  }
+  
+  div.col#right {
+    h1 {
+      color: blue;
+    }
+     height: 100%;
+  }
+}
+
+
+table {
+  margin: 20px 0px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  tr {
+    border-bottom: 2px solid lightgray;
+    
+    td {
+      padding: 10px;
+    }
+  }
+}
+table.results {
+  td.middle {
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+  }
+}
+table.form {
+  margin: 20px 0px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  tr {
+    border-bottom: 2px solid lightgray;
+    td.left {
+      width: 30%;
+      font-size: 2em;
+      line-height: 100%;
+    }
+  }
+}
+
+a:hover {
+  background: none;
+  color: black;
+}
+
+span.link-button {
+  border-radius: 4px;
+  padding: 10px 20px;
+  border: 2px solid gray;
+  color: gray;
+  display: inline-block;
+}
+span.link-button:hover {
+  background-color: gray;
+  color: white;
+}
+
+div.home-bg {
+    min-width: 100%;
+    width: 100%;
+    
+    min-height: 100%;
+    height: 100%;
+    
+      background: url(http://thehealthyholidaycompany.co.uk/travel-blog/wp-content/uploads/2013/11/man-running-countryside.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+}
+
+
+
+span.nav-user-name {
+    margin-right: 10px;
+    
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+div.outer {
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+    
+    img.profile-pic {
+        border-radius: 50%;
+    }
+    img.me {
+      width: 80%;
+      max-width: 100px;
+    }
+    
+    img.bud {
+      width: 100%;
+      max-width: 40px;
+      
+    }
+    
+    span.buddy-box {
+      display: inline-block;
+      text-align: center;
+
+    }
+}
+div.outer#full {
+  width: 95%;
+}
