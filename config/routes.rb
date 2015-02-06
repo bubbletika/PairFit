@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+  
+  root 'static_pages#home'
+  get  'static_pages/user_profile'
+  get  'static_pages/user_profile2'
+  get  'static_pages/find_buddy'
+  get  'static_pages/search_results'
+  get  'static_pages/buddy_page'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,67 @@
+<div class="outer">
+  <section>
+    <h1>Find a Buddy</h1>
+    <table class="form">
+      <tr>
+        <td class="left">
+          What activity do you want a buddy for?
+        </td>
+        <td class="right">
+         <select>
+           <option>Running</option>
+           <option>Lifting</option>
+           <option>Cycling</option>
+           <option>Walking</option>
+           <option>Swimming</option>
+           <option>Hiking</option>
+           <option>Other</option>
+         </select>
+        </td>
+      </tr>
+      <tr>
+      <tr>
+        <td class="left">
+          Do you want to meet up with your buddy in person?
+        </td>
+        <td class="right">
+         <select>
+           <option>Yes</option>
+           <option>No</option>
+         </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          Preferred Sex of Buddy
+        </td>
+        <td class="right">
+         <select>
+           <option>Male</option>
+           <option>Female</option>
+           <option>Don't Care</option>
+         </select>
+        </td>
+      </tr>      
+      <tr>
+        <td class="left">
+          How skilled do you want your partner to be compared to your own skill?
+        </td>
+        <td class="right">
+         <select>
+           <option>More</option>
+           <option>Equally</option>
+           <option>Less</option>
+         </select>
+        </td>
+      </tr>  
+      
+      
+    </table>
+    
+    <%= link_to static_pages_search_results_path  do %>
+      <span class="link-button">
+        View Matches
+      </span>
+    <% end %>
+  </section>
+</div>
