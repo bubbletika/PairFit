@@ -1,6 +1,47 @@
-<div class="home-bg">
-  
+<div class="jumbotron home-bg">
+    <div class="container"></div>
 </div>
+  <section>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 col-sm-6">
+                    <h3>Profile</h3>
+                    <%= link_to image_tag("profile.png", width: "200", class:"img-responsive center-block"), static_pages_user_profile_path %>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <h3>Buddies</h3>
+                    <%= link_to image_tag("buddies.png", width: "200", class:"img-responsive center-block"), static_pages_buddies_path %>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <h3>Schedule</h3>
+                    <%= image_tag "random.png", width: "200", class:"img-responsive center-block" %>
+                </div>
+            </div>
+        </div>
+  </section>
+  <section class="success" id="dashboard">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center" style="border-right: solid;">
+                    <h2>Last Workout</h2>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h1>5 mile Run <small>La Jolla Cove</small></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center" style="border-left: solid;">
+                    <h2>Points</h2>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h1>500</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
  <!--   <div class="jumbotron">

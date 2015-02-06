@@ -26,6 +26,14 @@ class StaticPagesController < ApplicationController
     
   end
 
+  def buddies
+
+  end
+
+  def schedule
+
+  end
+
  
   private
 
