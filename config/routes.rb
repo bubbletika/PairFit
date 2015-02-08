@@ -1,5 +1,5 @@
 PairFit::Application.routes.draw do
-  resource :users
+  resources :users
   
   root 'static_pages#home'
   get  'static_pages/user_profile'
