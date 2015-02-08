@@ -108,5 +108,27 @@ div.box {
       margin-top: calc(1em + 3px);
 
     }
+
+    div#new-user {
+      margin: 0 auto;
+      text-align: center;
+      width: 90%;
+      padding: .5em 1em;
+      background: #DAE791;
+      border-radius: 999999px;
+      /* border: 1px solid white; */
+      /* border: 1px solid rgba(191, 201, 133, 0.65); */
+      border: none;
+      border-bottom: 3px solid #C6D185;
+      margin-top: 1em;
+      color: #defe68;
+
+      a {
+        color: rgb(163, 173, 105);
+      }
+
+    }
   }
+
+
 }

@@ -11,7 +11,13 @@
     <%= f.text_field :email, id: "email", placeholder: "Email" %>
     <%= f.text_field :email, id: "pw", placeholder: "Password" %>
     <%= f.submit "log in" %>
-  <% end %>
+
+    <div id="new-user">
+      <%=link_to "New user? Sign up now!", new_users_path %>
+    </div>
+
+<% end %>
+
 
 
 
