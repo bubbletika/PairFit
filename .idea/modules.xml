@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/PairFit.iml" filepath="$PROJECT_DIR$/.idea/PairFit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tmun_app/.idea/tmun_app.iml" filepath="$PROJECT_DIR$/../tmun_app/.idea/tmun_app.iml" />
+    </modules>
+  </component>
+</project>

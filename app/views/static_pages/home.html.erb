@@ -1,4 +1,28 @@
-<div class="jumbotron home-bg">
+<div class="box">
+  <div id="big-logo">
+
+    <%= image_tag "pear1.png" %>
+
+    <span id="pairfit">PAIRFIT</span>
+
+  </div>
+
+  <%= form_for User.new, html: { class: "login" } do |f| %>
+    <%= f.text_field :email, id: "email", placeholder: "Email" %>
+    <%= f.text_field :email, id: "pw", placeholder: "Password" %>
+    <%= f.submit "log in" %>
+  <% end %>
+
+
+
+</div>
+
+
+
+
+
+
+<!--<div class="jumbotron home-bg">
     <div class="container"></div>
 </div>
   <section>
@@ -6,15 +30,15 @@
             <div class="row text-center">
                 <div class="col-md-4 col-sm-6">
                     <h3>Profile</h3>
-                    <%= link_to image_tag("profile.png", width: "200", class:"img-responsive center-block"), static_pages_user_profile_path %>
+                    <#%= link_to image_tag("profile.png", width: "200", class:"img-responsive center-block"), static_pages_user_profile_path %>
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <h3>Buddies</h3>
-                    <%= link_to image_tag("buddies.png", width: "200", class:"img-responsive center-block"), static_pages_buddies_path %>
+                    <#%= link_to image_tag("buddies.png", width: "200", class:"img-responsive center-block"), static_pages_buddies_path %>
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <h3>Schedule</h3>
-                    <%= image_tag "random.png", width: "200", class:"img-responsive center-block" %>
+                    <#%= image_tag "random.png", width: "200", class:"img-responsive center-block" %>
                 </div>
             </div>
         </div>
@@ -32,7 +56,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 
 
     <!-- Main jumbotron for a primary marketing message or call to action -->

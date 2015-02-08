@@ -3,7 +3,7 @@ class StaticPagesController < ApplicationController
   # GET /static_pages
   # GET /static_pages.json
   def home
-    
+    @user = nil
   end
   
   def user_profile

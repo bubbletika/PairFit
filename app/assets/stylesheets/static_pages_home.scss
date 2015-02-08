@@ -1,0 +1,111 @@
+$bgColor: #E5F29B;
+
+body {
+  background-color: $bgColor;
+}
+
+input {
+  outline:none !important;
+}
+
+div.box {
+  font-size: 8vw;
+  div#big-logo {
+    text-align: center;
+    margin-top: .5em;
+    margin-bottom: 2em;
+
+    img {
+      width:35%;
+    }
+    span#pairfit {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1em;
+      margin-top: .5em;
+    }
+  }
+
+  form.login {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    font-size: .7em;
+
+    ::-webkit-input-placeholder {
+      color: rgba(0, 0, 0, 0.2);
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+      color: rgba(0, 0, 0, 0.2);
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+      color: rgba(0, 0, 0, 0.2);
+    }
+
+    :-ms-input-placeholder {
+      color: rgba(0, 0, 0, 0.2);
+    }
+
+    input[type=text] {
+      text-align: left;
+      border-radius: 999999px;
+      width: 100%;
+      padding: .5em 1em;
+      padding-left: 2em;
+      background: rgba(255, 255, 255, 0.29);
+      border: 1px solid rgba(191, 201, 133, 0.35);
+      /* border-top: 1px solid white; */
+      color: black;
+
+    }
+    input[type=text]:focus {
+      outline:none !important;
+      background: white;
+    }
+    input[type=text]#email {
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      //border-bottom: none;
+    }
+    input[type=text]#pw {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-top: 1px solid rgba(0, 0, 0, 0);
+      margin-top: -1px;
+      border-bottom: 3px solid rgba(200, 212, 133, 0.27);
+    }
+    input[type=text]#email:focus {
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      //border-bottom: none;
+    }
+    input[type=text]#pw:focus {
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-bottom: 3px solid rgba(200, 212, 133, 0.27);
+      //border-top: none;
+    }
+
+    input[type=submit] {
+      width: 90%;
+      padding: .5em 1em;
+      background: #AEB60B;
+      border-radius: 999999px;
+      /* border: 1px solid white; */
+      /* border: 1px solid rgba(191, 201, 133, 0.65); */
+      border: none;
+      border-bottom: 3px solid rgba(159, 166, 12, 1);
+      margin-top: 1em;
+      color: rgb(222, 254, 104);
+
+    }
+
+    input[type=submit]:active {
+      border-bottom: none;
+      margin-top: calc(1em + 3px);
+
+    }
+  }
+}
