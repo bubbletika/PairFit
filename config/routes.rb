@@ -1,7 +1,9 @@
 PairFit::Application.routes.draw do
+
+  root                'sessions#new'
+  get    'signup'  => 'users#new'
   resources :users
-  
-  root 'static_pages#home'
+
   get  'static_pages/user_profile'
   get  'static_pages/user_profile2'
   get  'static_pages/find_buddy'
@@ -10,6 +12,10 @@ PairFit::Application.routes.draw do
   get  'static_pages/buddies'
   get  'static_pages/schedule'
 
+
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
