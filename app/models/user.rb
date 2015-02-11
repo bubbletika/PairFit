@@ -8,6 +8,19 @@ class User < ActiveRecord::Base
             uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, length: { minimum: 6 }
+  validates :bio, length: { maximum: 140 }
+  validates :location, presence: true, length: { maximum: 255 }
+
+
+  has_many :activities, through: :user_activities
+  has_many :user_activities
+
+  has_many :marks, through: :user_marks
+  has_many :user_marks
+
+  def add_activity(activity)
+    self.activity_associations.build(activity: activity)
+  end
 
   # Returns the hash digest of the given string.
   def User.digest(string)
@@ -37,4 +50,6 @@ class User < ActiveRecord::Base
   def forget
     update_attribute(:remember_digest, nil)
   end
+
+
 end

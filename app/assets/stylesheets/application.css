@@ -14,4 +14,18 @@
  *= require_self
  */
 
+body, html {
 
+}
+
+h1.top {
+    background: rgb(59, 59, 59);
+    padding: .5em;
+    color: rgb(232, 255, 100);
+    margin: 0;
+    font-size: .5em;
+}
+
+a, a:hover, a:active, a:focus {
+    text-decoration: none;
+}

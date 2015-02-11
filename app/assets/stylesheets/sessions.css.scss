@@ -3,6 +3,122 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+div.slide-container {
+  position:relative;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 100%;
+
+  div.slide {
+    vertical-align: top;
+    padding: 0 10%;
+    display: inline-block;
+    white-space: normal;
+  }
+}
+
+input[type=submit] {
+  width: 90%;
+  padding: .5em 1em;
+  background: #AEB60B;
+  border-radius: 999999px !important;
+  /* border: 1px solid white; */
+  /* border: 1px solid rgba(191, 201, 133, 0.65); */
+  border: none;
+  border-bottom: 3px solid rgba(159, 166, 12, 1);
+  margin-top: 1em;
+  color: rgb(222, 254, 104);
+}
+
+input[type=submit]:active {
+  border-bottom: none;
+  margin-top: calc(1em + 3px);
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow:0 0 0 50px rgba(235, 245, 183, 1) inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: #333;
+}
+
+input:-webkit-autofill:focus {
+  -webkit-box-shadow:0 0 0 50px white inset, 0 0 0 50px rgba(235, 245, 183, 1) inset;
+  -webkit-text-fill-color: #333;
+}
+
+form.sign-up {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  //width: 80%;
+  margin: 0 auto;
+  font-size: .7em;
+
+
+  table {
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    border-radius: .5em;
+    background-color: rgb(235, 245, 183);
+
+    td:first-child {
+      //text-align: right;
+    }
+    td:last-child {
+      //text-align: left;
+    }
+    tr {
+      border-bottom: 10px solid rgb(229, 242, 155);
+      td {
+        padding: 1em;
+      }
+    }
+    tr:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+
+  select, input[type=email], input[type=password], input[type=text], input[type=number] {
+    border-radius: 0;
+    text-align: left;
+    width: 100%;
+    padding: .5em 2em;
+
+    background: rgba(235, 245, 183, 1);
+    border: 1px solid rgba(191, 201, 133, 0.35);
+    /* border-top: 1px solid white; */
+    color: black;
+  }
+
+  select:last-child {
+    border-bottom-left-radius: 99999px;
+    border-bottom-right-radius: 99999px;
+  }
+
+  select:first-child {
+    border-top-left-radius: 99999px;
+    border-top-right-radius: 99999px;
+  }
+
+  select:focus, input[type=email]:focus, input[type=password]:focus, input[type=text]:focus,  input[type=number]:focus {
+    background-color: white;
+  }
+
+  input:first-child {
+    border-top-left-radius: 9999999px;
+    border-top-right-radius: 9999999px;
+    //border-bottom: none;
+  }
+  input:last-child {
+    border-bottom-left-radius: 99999px;
+    border-bottom-right-radius: 99999px;
+    /* border-top: 1px solid transparent; */
+    /* margin-top: -1px; */
+    border-bottom: 3px solid #d1d894;
+  }
+}
+
+
 form.login {
   font-family: 'Lato', sans-serif;
   text-align: center;
@@ -32,15 +148,20 @@ form.login {
     width: 100%;
     padding: .5em 1em;
     padding-left: 2em;
-    background: rgba(255, 255, 255, 0.29);
+    background: rgba(235, 245, 183, 1);
     border: 1px solid rgba(191, 201, 133, 0.35);
     /* border-top: 1px solid white; */
     color: black;
 
   }
-  input:focus {
-    outline:none !important;
-    background: white;
+  input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px rgba(235, 245, 183, 1) inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: #333;
+  }
+
+  input:-webkit-autofill:focus {
+    -webkit-box-shadow:0 0 0 50px white inset, 0 0 0 50px rgba(235, 245, 183, 1) inset;
+    -webkit-text-fill-color: #333;
   }
   input#email {
     border-bottom-left-radius: 0px;
@@ -52,37 +173,21 @@ form.login {
     border-top-right-radius: 0px;
     border-top: 1px solid rgba(0, 0, 0, 0);
     margin-top: -1px;
-    border-bottom: 3px solid rgba(200, 212, 133, 0.27);
+    border-bottom: 3px solid rgba(209, 216, 148, 1);
   }
   input#email:focus {
     border: 1px solid rgba(255, 255, 255, 0.5);
     //border-bottom: none;
+    background-color: white;
   }
   input#pw:focus {
     border: 1px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 3px solid rgba(200, 212, 133, 0.27);
+    border-bottom: 3px solid rgba(209, 216, 148, 1);
     //border-top: none;
+    background-color: white;
   }
 
-  input[type=submit] {
-    width: 90%;
-    padding: .5em 1em;
-    background: #AEB60B;
-    border-radius: 999999px;
-    /* border: 1px solid white; */
-    /* border: 1px solid rgba(191, 201, 133, 0.65); */
-    border: none;
-    border-bottom: 3px solid rgba(159, 166, 12, 1);
-    margin-top: 1em;
-    color: rgb(222, 254, 104);
 
-  }
-
-  input[type=submit]:active {
-    border-bottom: none;
-    margin-top: calc(1em + 3px);
-
-  }
 
   div#new-user {
     margin: 0 auto;
