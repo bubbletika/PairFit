@@ -29,3 +29,53 @@ h1.top {
 a, a:hover, a:active, a:focus {
     text-decoration: none;
 }
+
+div.big-box {
+  margin-top: 32px;
+}
+
+div#sidebar {
+  background: black;
+  color: white;
+  height: 100%;
+  width: 80%;
+  position: fixed;
+  top: 0;
+  right: 100%;
+  z-index: 150;
+  padding-top: 50px;
+}
+
+div#navbar {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 200;
+  background-color: rgba(16, 16, 16, 0.77);
+  color: white;
+  vertical-align: middle;
+  height: 32px;
+
+  padding: 3px;
+
+  span.pairfit {
+    vertical-align: top;
+    margin-left: 6px;
+    font-size: 20px;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: white;
+    display: inline-block;
+  }
+
+  a#menu {
+
+    vertical-align: middle;
+    img {
+      margin-left: 6px;
+      vertical-align: middle;
+      height: 60%;
+    }
+  }
+
+}
+

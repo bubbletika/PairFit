@@ -20,9 +20,26 @@ $(document).ready( function() {
 
     $('div.slide').innerWidth($(window).width());
 
+    var toggle = 0;
+    $('a#menu').click( function() {
+        if(toggle == 0){
+            $('div#sidebar').stop().animate( {
+                right: '20%'
+            }, 300, 'easeOutBack');
+            toggle = 1;
+        }
+        else if(toggle == 1){
+            $('div#sidebar').stop().animate( {
+                right: '100%'
+            }, 300, 'easeOutBack');
+            toggle = 0;
+        }
+    });
+
+
     $('a.next').click( function() {
         var w = $(window).width();
-        $(window).scrollTop(100);
+        $(window).scrollTop(0, 200);
         $('div.slide-container').stop().animate( {
             right: "+=" + w
         }, 300, 'easeOutBack');
@@ -31,7 +48,7 @@ $(document).ready( function() {
     });
     $('a.prev').click( function() {
         var w = $(window).width();
-        $(window).scrollTop(100);
+        $(window).scrollTop(0, 200);
         $('div.slide-container').stop().animate( {
             right: "-=" + w
         }, 300, 'easeOutBack');

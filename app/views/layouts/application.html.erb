@@ -63,10 +63,30 @@
         </div>&lt;!&ndash;/.navbar-collapse &ndash;&gt;
       </div>
     </nav>-->
+  <div id="sidebar">
+    <ul>
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+      <li>Four</li>
+      <li>Five</li>
+    </ul>
+  </div>
+  <div id="navbar">
+
+    <a href="javascript:;" id="menu">
+      <%= image_tag 'menu.png' %>
+    </a>
+    <span class="pairfit">
+      PAIRFIT
+    </span>
+  </div>
   <% flash.each do |message_type, message| %>
     <div class="alert alert-<%= message_type %>"><%= message %></div>
   <% end %>
-  <%= yield %>
+  <div class="big-box">
+    <%= yield %>
+  </div>
   <%= debug(params) if Rails.env.development? %>
 
     <!-- jQuery -->
