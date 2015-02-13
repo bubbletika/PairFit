@@ -11,6 +11,7 @@ PairFit::Application.routes.draw do
   get  'static_pages/buddy_page'
   get  'static_pages/buddies'
   get  'static_pages/schedule'
+  get  'static_pages/dashboard'
 
 
   get    'login'   => 'sessions#new'

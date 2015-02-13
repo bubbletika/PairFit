@@ -65,7 +65,13 @@
     </nav>-->
   <div id="sidebar">
     <ul>
-      <li><%= link_to "Profile", @current_user %></li>
+      <li>
+        <%= link_to static_pages_dashboard_path  do %>
+          <span class="link">Dashboard</span>
+        <% end %>
+      </li>
+
+      <li><%= link_to "Profile", current_user %></li>
 
       <li>
         <%= link_to static_pages_buddies_path  do %>
