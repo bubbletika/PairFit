@@ -1,10 +1,10 @@
-$bgColor: #E5F29B;
+$bgColor: #E4E8D1;
 
 body {
   background-color: $bgColor;
 }
 
-input {
+select, input {
   outline:none !important;
   line-height: normal;
 }

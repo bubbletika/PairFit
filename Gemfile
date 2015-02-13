@@ -10,6 +10,7 @@ gem 'bcrypt',               '3.1.7'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
+gem 'jquery-easing-rails'
 
 group :development, :test do
   gem 'pg', '0.15.1'

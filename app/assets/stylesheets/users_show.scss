@@ -1,18 +1,136 @@
-.prof-img{
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 75px;
-	max-height: 75px;
+div.prof-box {
+  //padding: .5em;
+}
+a {
+  cursor: pointer;
+}
+div.over {
+  background-color: rgba(0, 0, 0, 0.58);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: none;
+}
+div.add-confirmation {
+  text-align: center;
+  font-size: 1.5em;
+  background-color: white;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 1em;
+  padding: 1em;
+  position: relative;
+  z-index: 20;
+
+
+
+
+  div.buttons {
+    margin-top: 1em;
+
+    span.button {
+      border-radius: 99999px;
+      padding: .6em 1.2em;
+      background: #AEB60B;
+      /* border: 1px solid white; */
+      /* border: 1px solid rgba(191, 201, 133, 0.65); */
+      border: none;
+      border-bottom: 3px solid #9fa60c;
+      margin-top: 1em;
+      color: #FBFFA3;
+      font-size: .75em;
+    }
+  }
 }
 
-.activitybadge{
-	display: block;
-}
+div.add-buddy {
+  border-radius: 999999px;
+  background-color: rgb(48, 48, 48);
+  /* border: 3px solid black; */
+  color: rgb(184, 236, 41);
+  text-align: center;
+  font-weight: bold;
+  position: fixed;
+  top: .5em;
+  right: .5em;
+  width: 3em;
+  height: 3em;
+  z-index: 300;
 
-.prof h1{
-	text-align: center;
+  span {
+    font-size: 2.2em;
+  }
 }
+div.prof {
+  //background-color: #e3e3e3;
+  border-radius: 3px;
+  //border: 1px solid #b8b8b8;
+ // padding: .5em;
 
-.prof p{
-	border-bottom: 1px solid black;
+  div.top-box {
+    div.person-box {
+      vertical-align: top;
+      display: block;
+      text-align: center;
+
+      span.name {
+        font-size: 2em;
+        font-weight: bold;
+        display: inline-block;
+        //margin-top: .5em;
+      }
+
+      .prof-img{
+        width:50%;
+        max-width: 175px;
+        max-height: 175px;
+
+        border-radius: 50%;
+        border: 1em solid lightgray;
+      }
+    }
+    div.activity-box {
+      text-align: center;
+      vertical-align: top;
+      display: block;
+      margin-top: 1em;
+
+      div.activity-info {
+        margin-top: 1em;
+        background-color: rgb(223, 255, 105);
+        padding: 1em;
+        display: none;
+      }
+    }
+  }
+
+
+  .activity-badge{
+    width: 20%;
+    min-width: 32px;
+    min-height: 32px;
+  }
+
+  div.bio {
+    background: white;
+    border-radius: 4px;
+    padding: 1em;
+    margin: .5em;
+    margin-top: 1.5em;
+
+    h5 {
+      margin: .5em 0;
+    }
+  }
+
+  .prof h1{
+    text-align: center;
+  }
+
+  .prof p{
+    border-bottom: 1px solid black;
+  }
 }

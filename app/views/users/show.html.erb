@@ -1,27 +1,71 @@
 <!-- This will be future profile -->
-<h1>
-  <%= @user.name %>, <%= @user.email %>
-</h1>
+<div class="over"></div>
 
-<div class="prof">
-	<!-- Profile Image -->
-	<img src="whatever their image is" class="prof-img">
+<div class="prof-box">
+  <div class="prof">
+    <div class="top-box">
 
-	<!-- Activity Badges -->
-	<div class="activitybadge">
-		<img src="activity1">
-		<img src="activity2">
-		<img src="activity3">
-		<img src="activity4">	
-	</div>
+      <!-- Left -->
+      <div class="person-box">
+        <!-- Profile Image -->
+        <%= image_tag "profile.jpg", class: "prof-img" %>
+        <br>
+        <span class="name"><%= @user.name %></span>
+        <br>
+        <span class="age">
+          <%= @user.age %>
+        </span>
+        &middot
+        <span class="location">
+          San Diego, CA
+        </span>
+      </div>
 
-	<!-- Name -->
-	<h1><%@user.name %></h1>
-	<!-- Location -->
-	<p>Location</p>
-	<p>This is where I would write stuff about me.</p>
-	<h3>My Goals</h3>
-	<h4>1. Goal #1</h4>
-	<h4>2. Goal #2</h4>
-	<h4>3. Goal #3</h4>
+      <div class="slide-container">
+
+        <div class="slide">
+          <a href="javascript:;" class="add-buddy-button next">
+            <div class="add-buddy">
+              <span>+</span>
+            </div>
+          </a>
+          <div class="activity-box">
+            <% @user.activities.each do |a| %>
+              <a href="javascript:;" class="activity-button" id="<%= a.name.delete(' ') %>">
+                <%= image_tag(a.name.delete(' ') + '.png', class: "activity-badge") %>
+              </a>
+            <% end %>
+
+            <% @user.activities.each do |a| %>
+              <div class="activity-info" id="<%= a.name.delete(' ') %>">
+                <h5><%= a.name.upcase %></h5>
+                adf;lkajds f;lakdsjf ;alkdsfj ;aldskfj ald;skf ja;ldskf jads;lkf jasd;klf ja;sdklf j
+              </div>
+            <% end %>
+          </div>
+          <!-- Location -->
+          <div class="bio">
+            <h5>ABOUT ME</h5>
+            <%= @user.bio %>
+          </div>
+        </div>
+
+        <div class="slide">
+
+          <div class="add-confirmation">
+            <div>
+              <a href="javascript:;" class="prev">
+                Add <%= @user.name %> as a partner?
+              </a>
+            </div>
+            <div class="buttons">
+              <a href="javascript:;"><span class="button">Yes!</span></a>
+              <a href="javascript:;" class="prev"><span class="button">Go back</span></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

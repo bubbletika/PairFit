@@ -1,24 +1,49 @@
+<div class="box">
 <% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages' %>
-
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
-
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
+<h1 class="top">Sign up</h1>
+  <%= form_for(@user, html: {class:"sign-up"}) do |f| %>
+    <div class="slide-container">
+      <div class="slide">
+        <h3 class="sign-up-step">ACCOUNT</h3>
+          <div>
+            <%= f.text_field :name, placeholder: "Name" %>
+            <%= f.email_field :email, placeholder: "Email" %>
+            <%= f.password_field :password, placeholder: "Password" %>
+            <%= f.password_field :password_confirmation, placeholder: "Retype password" %>
+          </div>
+          <%= link_to "Next >", "#", class: "next"%>
+        </div>
+        <div class="slide">
+          <h3 class="sign-up-step">ABOUT YOU</h3>
+            <div>
+              <%= f.number_field :age, placeholder: "Age" %>
+              <%= f.number_field :height, placeholder: "Height (inches)" %>
+              <%= f.number_field :weight, placeholder: "Weight (pouncds)" %>
+              <%= f.select(:gender, [['Male', 'M'], ['Female', 'F'], ['Other', 'O']]) %>
+              <%= f.text_field :location, placeholder: "Location (City or Zipcode)" %>
+              <%= f.text_area :bio, placeholder: "Short bio (140 characters)" %>
+            </div>
+            <%= link_to "< Back", "#", class: "prev"%>
+            <%= link_to "Next >", "#", class: "next"%>
+        </div>
+        <div class="slide">
+          <h3 class="sign-up-step">SELECT YOUR ACTIVITIES</h3>
+          <%= render 'shared/error_messages' %>
+          <div>
+            <table>
+            <%= f.collection_check_boxes(:activity_ids, Activity.all, :id, :name ) do |b| %>
+              <tr>
+                <td><%= b.label %></td>
+                <td><%= b.check_box %></td>
+              </tr>
+            <% end %>
+            </table>
+          </div>
+          <%= link_to "< Back", "#", class: "prev"%>
+          <%= f.submit "Create my account" %>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>

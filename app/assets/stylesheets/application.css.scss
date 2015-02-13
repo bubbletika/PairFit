@@ -1,0 +1,81 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body, html {
+
+}
+
+h1.top {
+    background: rgb(59, 59, 59);
+    padding: .5em;
+    color: rgb(232, 255, 100);
+    margin: 0;
+    font-size: .5em;
+}
+
+a, a:hover, a:active, a:focus {
+    text-decoration: none;
+}
+
+div.big-box {
+  margin-top: 32px;
+}
+
+div#sidebar {
+  background: black;
+  color: white;
+  height: 100%;
+  width: 80%;
+  position: fixed;
+  top: 0;
+  right: 100%;
+  z-index: 150;
+  padding-top: 50px;
+}
+
+div#navbar {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 200;
+  background-color: rgba(16, 16, 16, 0.77);
+  color: white;
+  vertical-align: middle;
+  height: 32px;
+
+  padding: 3px;
+
+  span.pairfit {
+    vertical-align: top;
+    margin-left: 6px;
+    font-size: 20px;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: white;
+    display: inline-block;
+  }
+
+  a#menu {
+
+    vertical-align: middle;
+    img {
+      margin-left: 6px;
+      vertical-align: middle;
+      height: 60%;
+    }
+  }
+
+}
+

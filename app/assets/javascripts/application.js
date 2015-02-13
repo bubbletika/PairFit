@@ -12,4 +12,62 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.easing
 //= require_tree .
+
+
+$(document).ready( function() {
+
+    $('div.slide').innerWidth($(window).width());
+
+    var toggle = 0;
+    $('a#menu').click( function() {
+        if(toggle == 0){
+            $('div#sidebar').stop().animate( {
+                right: '20%'
+            }, 300, 'easeOutBack');
+            toggle = 1;
+        }
+        else if(toggle == 1){
+            $('div#sidebar').stop().animate( {
+                right: '100%'
+            }, 300, 'easeOutBack');
+            toggle = 0;
+        }
+    });
+
+
+    $('a.next').click( function() {
+        var w = $(window).width();
+        $(window).scrollTop(0, 200);
+        $('div.slide-container').stop().animate( {
+            right: "+=" + w
+        }, 300, 'easeOutBack');
+        $('a.add-buddy-button').fadeOut(200);
+        $('div.over').fadeIn(100);
+    });
+    $('a.prev').click( function() {
+        var w = $(window).width();
+        $(window).scrollTop(0, 200);
+        $('div.slide-container').stop().animate( {
+            right: "-=" + w
+        }, 300, 'easeOutBack');
+        $('a.add-buddy-button').fadeIn(200);
+        $('div.over').fadeOut(100);
+    });
+
+
+    $('a.activity-button').click( function() {
+        var target = 'div.activity-info#' + $(this).attr('id');
+        $("div.activity-info:visible").stop().slideUp(200);
+        $(target).stop().slideToggle(200);
+    });
+
+    $('a.add-buddy-button').click( function() {
+        var target = 'div.activity-info#' + $(this).attr('id');
+        $("div.activity-info:visible").stop().slideUp(200);
+        $(target).stop().slideToggle(200);
+    });
+
+
+});
