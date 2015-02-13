@@ -64,36 +64,67 @@
       </div>
     </nav>-->
   <div id="sidebar">
-    <ul>
-      <li>
-        <%= link_to static_pages_dashboard_path  do %>
-          <span class="link">Dashboard</span>
-        <% end %>
-      </li>
+    <% if logged_in? %>
+      <ul>
+        <li>
+          <%= link_to static_pages_dashboard_path  do %>
+            <span class="link">Dashboard</span>
+          <% end %>
+        </li>
 
-      <li><%= link_to "Profile", current_user %></li>
+        <li>
+          <%= link_to current_user do %>
+            <span class="link">Profile</span>
+          <% end %>
+        </li>
 
-      <li>
-        <%= link_to static_pages_buddies_path  do %>
-          <span class="link">Buddies</span>
-        <% end %>
-      </li>
+        <li>
+          <%= link_to static_pages_buddies_path  do %>
+            <span class="link">Buddies</span>
+          <% end %>
+        </li>
 
-      <li>
-        <%= link_to static_pages_find_buddy_path  do %>
-          <span class="link">Find a Buddy</span>
-        <% end %>
-      </li>
+        <li>
+          <%= link_to static_pages_find_buddy_path  do %>
+            <span class="link">Find a Buddy</span>
+          <% end %>
+        </li>
 
-      <li>
-        <%= link_to static_pages_schedule_path  do %>
-          <span class="link">Schedule</span>
-        <% end %>
-      </li>
+        <li>
+          <%= link_to static_pages_schedule_path  do %>
+            <span class="link">Schedule</span>
+          <% end %>
+        </li>
 
-      <li>Messages</li>
+        <li>
+          <%= link_to 'javascript:;' do %>
+            <span class="link">Messages</span>
+          <% end %>
+        </li>
 
-    </ul>
+        <li>
+          <%= link_to logout_path, method: "delete" do %>
+            <span class="link">Log out</span>
+          <% end %>
+        </li>
+
+      </ul>
+    <% else %>
+      <ul>
+        <li>
+          <%= link_to static_pages_home_path  do %>
+            <span class="link">Log In</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to new_user_path  do %>
+            <span class="link">Sign Up!</span>
+          <% end %>
+        </li>
+      </ul>
+    <% end %>
+
+
   </div>
   <div id="navbar">
 
