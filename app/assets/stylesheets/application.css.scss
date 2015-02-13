@@ -15,6 +15,7 @@
  */
 
 body, html {
+  //padding-top: 50px;
   overflow-x: hidden;
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -32,7 +33,7 @@ a, a:hover, a:active, a:focus {
 }
 
 div.big-box {
-  margin-top: 32px;
+  margin-top: 50px;
 }
 
 div#sidebar {
@@ -47,6 +48,16 @@ div#sidebar {
   padding-top: 50px;
 
   font-size: 1.2em;
+
+  span#logged-in-as {
+    display: inline-block;
+    font-size: .75em;
+    padding: 1em;
+    /* margin-top: 1em; */
+    color: rgb(254, 255, 132);
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
 
   ul {
     list-style: none;
@@ -78,14 +89,29 @@ div#navbar {
   z-index: 200;
   background-color: rgba(16, 16, 16, 0.77);
   color: white;
-  vertical-align: middle;
-  height: 32px;
-
-  padding: 3px;
+  /* vertical-align: middle; */
+  /* height: 50px; */
+  /* display: inline-block; */
+  /* vertical-align: middle; */
+  /* padding: 3px; */
+  /* position: relative; */
+  height: 50px;
+  display: -ms-flexbox;
+  -ms-flex-pack: center;
+  -ms-flex-align: center;
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  display: -webkit-box;
+  /* -webkit-box-pack: center; */
+  -webkit-box-align: center;
+  display: box;
+  box-pack: center;
+  box-align: center;
 
   span.pairfit {
     vertical-align: top;
-    margin-left: 6px;
+    margin-left: 18px;
     font-size: 20px;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: white;
@@ -93,12 +119,13 @@ div#navbar {
   }
 
   a#menu {
-
+    display: inline-block;
     vertical-align: middle;
     img {
-      margin-left: 6px;
+      display: inline-block;
+      margin-left: 18px;
       vertical-align: middle;
-      height: 60%;
+      height: 25px;
     }
   }
 
