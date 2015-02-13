@@ -34,6 +34,10 @@ class StaticPagesController < ApplicationController
 
   end
 
+  def dashboard
+
+  end
+
  
   private
 
