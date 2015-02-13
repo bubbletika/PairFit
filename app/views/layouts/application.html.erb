@@ -65,11 +65,11 @@
     </nav>-->
   <div id="sidebar">
     <ul>
-      <li>One</li>
-      <li>Two</li>
-      <li>Three</li>
-      <li>Four</li>
-      <li>Five</li>
+      <li><%= link_to "Profile", @user_profile %></li>
+      <li><%= link_to static_pages_buddies_path  do %>Buddies<% end %></li>
+      <li><%= link_to static_pages_find_buddy_path  do %>Find a Buddy<% end %></li>
+      <li><%= link_to static_pages_schedule_path  do %>Schedule<% end %></li>
+      <li>Messages</li>
     </ul>
   </div>
   <div id="navbar">
