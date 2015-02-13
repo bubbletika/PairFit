@@ -65,22 +65,28 @@
     </nav>-->
   <div id="sidebar">
     <ul>
+      <li><%= link_to "Profile", @current_user %></li>
+
       <li>
-      <%= link_to "javascript:;" do %>
-        <span class="link">Dashboard</span>
-      <% end %>
-      <%= link_to "javascript:;" do %>
-        <span class="link">My Buddies</span>
-      <% end %>
-      <%= link_to "javascript:;" do %>
-        <span class="link">My Profile</span>
-      <% end %>
-      <%= link_to "javascript:;" do %>
-        <span class="link">Find a Buddy</span>
-      <% end %>
-      <%= link_to "javascript:;" do %>
-        <span class="link">Log Out</span>
-      <% end %>
+        <%= link_to static_pages_buddies_path  do %>
+          <span class="link">Buddies</span>
+        <% end %>
+      </li>
+
+      <li>
+        <%= link_to static_pages_find_buddy_path  do %>
+          <span class="link">Find a Buddy</span>
+        <% end %>
+      </li>
+
+      <li>
+        <%= link_to static_pages_schedule_path  do %>
+          <span class="link">Schedule</span>
+        <% end %>
+      </li>
+
+      <li>Messages</li>
+
     </ul>
   </div>
   <div id="navbar">
