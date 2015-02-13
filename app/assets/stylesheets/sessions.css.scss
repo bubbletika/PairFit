@@ -31,7 +31,7 @@ input[type=submit] {
 }
 
 input[type=submit]:active {
-  border-bottom: none;
+  border-bottom: none !important;
   margin-top: calc(1em + 3px);
 }
 

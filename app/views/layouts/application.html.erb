@@ -65,6 +65,7 @@
     </nav>-->
   <div id="sidebar">
     <% if logged_in? %>
+      Logged in as <%= current_user.name %>
       <ul>
         <li>
           <%= link_to static_pages_dashboard_path  do %>
@@ -104,7 +105,7 @@
 
         <li>
           <%= link_to logout_path, method: "delete" do %>
-            <span class="link">Log out</span>
+            <span class="link">Sign out</span>
           <% end %>
         </li>
 
@@ -112,7 +113,7 @@
     <% else %>
       <ul>
         <li>
-          <%= link_to static_pages_home_path  do %>
+          <%= link_to root_url  do %>
             <span class="link">Log In</span>
           <% end %>
         </li>
