@@ -2,7 +2,11 @@ PairFit::Application.routes.draw do
 
   root                'sessions#new'
   get    'signup'  => 'users#new'
-  resources :users
+  resources :users do
+    get "dashboard", on: :member
+    get "buddies", on: :member
+    get "schedule", on: :member
+  end
 
   get  'static_pages/user_profile'
   get  'static_pages/user_profile2'

@@ -68,7 +68,10 @@
       <span id="logged-in-as">Logged in as <%= current_user.name %></span>
       <ul>
         <li>
-          <%= link_to static_pages_dashboard_path  do %>
+          <%#= link_to static_pages_dashboard_path  do %>
+          <%# end %>
+          <%#= link_to "Dashboard", dashboard_user_path(current_user), :class=>"link"%>
+          <%= link_to dashboard_user_path(current_user) do %>
             <span class="link">Dashboard</span>
           <% end %>
         </li>
@@ -80,7 +83,7 @@
         </li>
 
         <li>
-          <%= link_to static_pages_buddies_path  do %>
+          <%= link_to buddies_user_path(current_user)  do %>
             <span class="link">Buddies</span>
           <% end %>
         </li>
@@ -92,7 +95,7 @@
         </li>
 
         <li>
-          <%= link_to static_pages_schedule_path  do %>
+          <%= link_to schedule_user_path(current_user)  do %>
             <span class="link">Schedule</span>
           <% end %>
         </li>
