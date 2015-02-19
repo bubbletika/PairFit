@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.easing
+//= require moment
+//= require fullcalendar
 //= require_tree .
 
 
