@@ -20,6 +20,8 @@
 
 $(document).ready( function() {
 
+    $('div.alert').delay(1000).slideUp(300);
+
     $('div.slide').innerWidth($(window).width());
 
     var toggle = 0;

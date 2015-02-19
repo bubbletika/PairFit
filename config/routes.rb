@@ -6,8 +6,19 @@ PairFit::Application.routes.draw do
     get "dashboard", on: :member
     get "buddies", on: :member
     get "schedule", on: :member
+    get "buddies", on: :member
+    get "buddy_page", on: :member
+    get 'edit_activities', on: :member
+    patch 'update_activities', on: :member
+    resources :user_activities
+    resources :user_marks
   end
 
+  resources :users
+
+  resources :partnerships
+  resources :user_marks
+  resources :user_activities
   get  'static_pages/user_profile'
   get  'static_pages/user_profile2'
   get  'static_pages/find_buddy'

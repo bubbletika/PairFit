@@ -1,0 +1,12 @@
+<h1>Edit your activities</h1>
+<%= form_for @user, url: {action: 'update_activities' }, method: :patch do |f| %>|
+  <table>
+    <%= f.collection_check_boxes(:activity_ids, Activity.all, :id, :name ) do |b| %>
+      <tr>
+        <td><%= b.label %></td>
+        <td><%= b.check_box %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= f.submit "Submit" %>
+<% end %>

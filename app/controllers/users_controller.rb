@@ -40,6 +40,35 @@ class UsersController < ApplicationController
     end
   end
 
+
+
+
+  def edit_activities
+    @user = User.find(params[:id])
+  end
+
+  def update_activities
+    @user = User.find(params[:id])
+
+      @user.user_activities.destroy_all
+
+      params[:user][:activity_ids].each do |a|
+        @user.user_activities.create(user_id: @user.id, activity_id: a)
+      end
+
+      flash[:success] = "Added activitiy"
+      redirect_to @user
+
+  end
+
+  def buddies
+    @buddies = current_user.partners.all
+  end
+
+  def buddy_page
+    @buddy = User.find(params[:id])
+  end
+
   private
 
   def user_params
@@ -55,7 +84,7 @@ class UsersController < ApplicationController
   end
 
   def correct_user
-      @user = User.find(params[:id])
-      redirect_to(root_url) unless @user == current_user
+    @user = User.find(params[:id])
+    redirect_to(root_url) unless current_user?(@user)
   end
 end

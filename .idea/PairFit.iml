@@ -120,6 +120,7 @@
     <orderEntry type="library" scope="PROVIDED" name="celluloid (v0.16.0, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="childprocess (v0.3.6, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coderay (v1.1.0, ruby-1.9.3-p484) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="commonjs (v0.2.7, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cucumber (v1.3.18, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cucumber-rails (v1.3.0, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="database_cleaner (v1.4.0@bef9fe, ruby-1.9.3-p484) [gem]" level="application" />
@@ -131,6 +132,7 @@
     <orderEntry type="library" scope="PROVIDED" name="faker (v1.1.2, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.9.6, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="formatador (v0.2.5, ruby-1.9.3-p484) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="fullcalendar-rails (v2.0.2.0, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="gherkin (v2.12.2, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="growl (v1.0.3, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="guard (v2.11.1, ruby-1.9.3-p484) [gem]" level="application" />
@@ -143,6 +145,8 @@
     <orderEntry type="library" scope="PROVIDED" name="jquery-easing-rails (v0.0.1, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v3.0.4, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="json (v1.8.2, ruby-1.9.3-p484) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="less (v2.6.0, ruby-1.9.3-p484) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="less-rails (v2.6.0, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="listen (v2.8.5, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="lumberjack (v1.0.9, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.5.4, ruby-1.9.3-p484) [gem]" level="application" />
@@ -189,6 +193,7 @@
     <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="timers (v4.0.1, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="treetop (v1.4.15, ruby-1.9.3-p484) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="twitter-bootstrap-rails (v3.2.1@cd805c, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.43, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.1.1, ruby-1.9.3-p484) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket (v1.0.7, ruby-1.9.3-p484) [gem]" level="application" />

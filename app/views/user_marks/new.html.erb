@@ -1,0 +1,16 @@
+
+
+<h1>New Personal Best</h1>
+<h3><%= @activity.name %> / <%= @mark.name %></h3>
+
+
+<div>
+  <%= form_for @user.user_marks.build do |f| %>
+    <%= f.label :amount %>
+    <%= f.number_field :amount, step: 'any' %>
+
+    <%= f.hidden_field :mark_id, :value => @mark.id %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.submit "Add new personal best" %>
+  <% end %>
+</div>

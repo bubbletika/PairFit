@@ -11,6 +11,11 @@ class User < ActiveRecord::Base
   validates :bio, length: { maximum: 140 }
   validates :location, presence: true, length: { maximum: 255 }
 
+  has_many :partnerships
+  has_many :partners, :through => :partnerships
+  has_many :inverse_partnerships, :class_name => "Partnership", :foreign_key => "partner_id"
+  has_many :inverse_partners, :through => :inverse_partnerships, :source => :user
+
 
   has_many :activities, through: :user_activities
   has_many :user_activities
@@ -32,6 +37,10 @@ class User < ActiveRecord::Base
   # Returns a random token.
   def User.new_token
     SecureRandom.urlsafe_base64
+  end
+
+  def user_mark(mark)
+    UserMark.where(user_id: self.id, mark_id: mark.id).last
   end
 
   # Remembers a user in the database for use in persistent sessions.

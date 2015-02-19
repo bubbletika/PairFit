@@ -5,124 +5,12 @@
         <span class="link-button">
           < Go Back
         </span>
+      <br>
+      <br>
       <% end %>    
     
     <table class="results">
-      <tr>
-        <td class="left">
-          <%= link_to static_pages_user_profile2_path do %>
-            <span class="buddy-box">
-              <%= image_tag 'http://www.northleach.gov.uk/wp-content/uploads/2013/12/blank-avatar-220x220.png', class: 'bud profile-pic' %>
-              <br>
-              John Smith
-            </span>
-          <% end %>
-        </td>
-        <td class="middle">
-          <span class="buddy-box">
-            I'm really cool. 
-          </span>
-        </td>
-        <td class="right">
-          <%= link_to static_pages_buddy_page_path  do %>
-            <span class="link-button">
-              Buddy Up!
-            </span>
-          <% end %>
-        </td>
-      </tr>
-      <tr>
-        <td class="left">
-          <%= link_to static_pages_user_profile2_path do %>
-            <span class="buddy-box">
-              <%= image_tag 'http://www.northleach.gov.uk/wp-content/uploads/2013/12/blank-avatar-220x220.png', class: 'bud profile-pic' %>
-              <br>
-              John Smith
-            </span>
-          <% end %>
-        </td>
-        <td class="middle">
-          <span class="buddy-box">
-            I'm really cool. 
-          </span>
-        </td>
-        <td class="right">
-          <%= link_to static_pages_buddy_page_path  do %>
-            <span class="link-button">
-              Buddy Up!
-            </span>
-          <% end %>
-        </td>
-      </tr>
-      <tr>
-        <td class="left">
-          <%= link_to static_pages_user_profile2_path do %>
-            <span class="buddy-box">
-              <%= image_tag 'http://www.northleach.gov.uk/wp-content/uploads/2013/12/blank-avatar-220x220.png', class: 'bud profile-pic' %>
-              <br>
-              John Smith
-            </span>
-          <% end %>
-        </td>
-        <td class="middle">
-          <span class="buddy-box">
-            I'm really cool. 
-          </span>
-        </td>
-        <td class="right">
-          <%= link_to static_pages_buddy_page_path  do %>
-            <span class="link-button">
-              Buddy Up!
-            </span>
-          <% end %>
-        </td>
-      </tr>
-      <tr>
-        <td class="left">
-          <%= link_to static_pages_user_profile2_path do %>
-            <span class="buddy-box">
-              <%= image_tag 'http://www.northleach.gov.uk/wp-content/uploads/2013/12/blank-avatar-220x220.png', class: 'bud profile-pic' %>
-              <br>
-              John Smith
-            </span>
-          <% end %>
-        </td>
-        <td class="middle">
-          <span class="buddy-box">
-            I'm really cool. 
-          </span>
-        </td>
-        <td class="right">
-          <%= link_to static_pages_buddy_page_path  do %>
-            <span class="link-button">
-              Buddy Up!
-            </span>
-          <% end %>
-        </td>
-      </tr>
-      <tr>
-        <td class="left">
-          <%= link_to static_pages_user_profile2_path do %>
-            <span class="buddy-box">
-              <%= image_tag 'http://www.northleach.gov.uk/wp-content/uploads/2013/12/blank-avatar-220x220.png', class: 'bud profile-pic' %>
-              <br>
-              John Smith
-            </span>
-          <% end %>
-        </td>
-        <td class="middle">
-          <span class="buddy-box">
-            I'm really cool. 
-          </span>
-        </td>
-        <td class="right">
-          <%= link_to static_pages_buddy_page_path  do %>
-            <span class="link-button">
-              Buddy Up!
-            </span>
-          <% end %>
-        </td>
-      </tr>
+      <%= render partial: "user_row", collection: @users, as: 'user' %>
     </table>
   </section>
 </div>

@@ -19,7 +19,7 @@ class StaticPagesController < ApplicationController
   end
   
   def search_results
-  
+    @users = User.all
   end
   
   def buddy_page

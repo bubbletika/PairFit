@@ -35,11 +35,26 @@
                 <%= image_tag(a.name.delete(' ') + '.png', class: "activity-badge") %>
               </a>
             <% end %>
-
+            <br>
+            <%= link_to "Edit activities", edit_activities_user_path(@user) %>
             <% @user.activities.each do |a| %>
               <div class="activity-info" id="<%= a.name.delete(' ') %>">
                 <h5><%= a.name.upcase %></h5>
-                adf;lkajds f;lakdsjf ;alkdsfj ;aldskfj ald;skf ja;ldskf jads;lkf jasd;klf ja;sdklf j
+                <table>
+                  <% a.marks.each do |m| %>
+                    <tr>
+                      <td>
+                        <%= m.name %>:
+                      </td>
+                      <td>
+                        <%= @user.user_mark(m).amount %>
+                      </td>
+                      <td>
+                          <%= link_to "New Personal Best", new_user_user_mark_path(user_id: @user.id,  mark: m, activity: a) %>
+                      </td>
+                    </tr>
+                  <% end %>
+                </table>
               </div>
             <% end %>
           </div>
@@ -52,13 +67,38 @@
             <div class="bio text-center">
               <h5>GOALS</h5>
             </div>  
-            <div class="bio text-center">
+<!--            <div class="bio text-center">
               <h5>ACTIVITIES</h5>
+
+            </div>-->
+            <div class="bio text-center">
+              <h5>BUDDIES</h5>
+              <table class="small-buddies">
+                <% for partnership in @user.partnerships %>
+                  <tr>
+                    <td>
+                      <%= link_to buddy_page_user_path(partnership.partner) do %>
+                        <span class="buddy-box">
+                          <%= image_tag 'http://www.northleach.gov.uk/wp-content/uploads/2013/12/blank-avatar-220x220.png', class: 'bud profile-pic' %>
+                           <br>
+                           <%= partnership.partner.name %>
+                        </span>
+                      <% end %>
+                    </td>
+                    <td>
+                      (<%= link_to "remove", partnership, :method => :delete %>)
+                    </td>
+                  </tr>
+                <% end %>
+              </table>
             </div>
             <div class="text-center">
-              <%= link_to "Edit Profile", edit_user_path(current_user), class: "btn btn-primary" %>
+              <% if current_user?(@user) %>
+                <%= link_to "Edit Profile", edit_user_path(current_user), class: "btn btn-primary" %>
+              <% end %>
             </div>
           </div>
+
         </div>
   
         <div class="slide">
@@ -67,7 +107,11 @@
               Add <%= @user.name %> as a partner?
             </div>
             <div class="buttons">
-              <a href="javascript:;"><span class="button">Yes!</span></a>
+
+              <%= link_to partnerships_path(:partner_id => @user), :method => :post do %>
+                <span class="button">Yes!</span>
+              <% end %>
+
               <a href="javascript:;" class="prev"><span class="button">Go back</span></a>
             </div>
 

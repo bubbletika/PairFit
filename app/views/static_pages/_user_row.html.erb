@@ -1,0 +1,16 @@
+<tr>
+  <td class="left">
+    <%= link_to user do %>
+            <span class="buddy-box">
+              <%= image_tag 'http://www.northleach.gov.uk/wp-content/uploads/2013/12/blank-avatar-220x220.png', class: 'bud profile-pic' %>
+              <br>
+              <%= user.name %>
+            </span>
+    <% end %>
+  </td>
+  <td class="middle">
+          <span class="buddy-box">
+          <%= user.bio %>
+          </span>
+  </td>
+</tr>
