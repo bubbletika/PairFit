@@ -38,6 +38,10 @@ class StaticPagesController < ApplicationController
 
   end
 
+  def search_results_B
+    @users = User.all
+  end
+
  
   private
 

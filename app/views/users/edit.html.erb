@@ -1,9 +1,14 @@
 <!-- This is how the user can edit his/her profile -->
 <div class="over"></div>
-
   <div class="prof-box">
     <div class="col-sm-6 col-sm-offset-3">
+      <h1 class="text-center">Update Your Information</h1>
+      <hr>
+      <div class="text-center">
+        <%= link_to "Go Back", current_user, class: "btn btn-primary"%>
+      </div>
       <%= form_for(@user) do |f| %>
+        <%= render 'shared/error_messages' %>
         <%= f.label :name %>
         <%= f.text_field :name, class: 'form-control' %>
 

@@ -24,6 +24,7 @@
       <div class="slide-container">
 
         <div class="slide">
+          
           <a href="javascript:;" class="add-buddy-button next">
             <div class="add-buddy">
               <span>+</span>
@@ -36,7 +37,10 @@
               </a>
             <% end %>
             <br>
-            <%= link_to "Edit activities", edit_activities_user_path(@user) %>
+            <% if current_user?(@user) %>
+                <%= link_to "Edit activities", edit_activities_user_path(@user), class: "btn btn-primary" %>
+                <%= link_to "Edit Profile", edit_user_path(current_user), class: "btn btn-primary" %>
+            <% end %>
             <% @user.activities.each do |a| %>
               <div class="activity-info" id="<%= a.name.delete(' ') %>">
                 <h5><%= a.name.upcase %></h5>
@@ -94,15 +98,9 @@
                 <% end %>
               </table>
             </div>
-            <div class="text-center">
-              <% if current_user?(@user) %>
-                <%= link_to "Edit Profile", edit_user_path(current_user), class: "btn btn-primary" %>
-              <% end %>
-            </div>
           </div>
 
         </div>
-  
         <div class="slide">
           <div class="add-confirmation">
             <div>
@@ -116,7 +114,6 @@
 
               <a href="javascript:;" class="prev"><span class="button">Go back</span></a>
             </div>
-
           </div>
         </div>
       </div>
