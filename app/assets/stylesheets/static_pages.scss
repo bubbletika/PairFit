@@ -11,8 +11,32 @@ section {
   padding: 10px;
 }
 
+.viewProfButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  font-weight: 300;
+}
 
+.viewProfButton:hover {
+  background-color: #BAE888;
+  color: #333;
+  font-weight: 300;
+}
 
+.modal-footer {
+  margin: 0;
+  padding: 0; 
+}
+
+.users {
+  padding: 30px 10px 30px 10px;
+}
+
+.modal {
+  top: 30%;
+}
 
 /*table {
   margin: 20px 0px;
