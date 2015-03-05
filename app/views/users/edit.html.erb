@@ -15,26 +15,28 @@
         <%= f.label :email %>
         <%= f.email_field :email, class: 'form-control' %>
 
-        <%= f.label :password %>
-        <%= f.password_field :password, class: 'form-control' %>
-
-        <%= f.label :password_confirmation, "Confirmation" %>
-        <%= f.password_field :password_confirmation, class: 'form-control' %>
-
         <%= f.label :age %>
         <%= f.text_field :age, class: 'form-control' %>
 
         <%= f.label :location %>
         <%= f.text_field :location, class: 'form-control' %>
 
-        <%= f.label :weight %>
+        <%= f.label :weight, "Weight (Don't worry! This is private information)" %>
         <%= f.text_field :weight, class: 'form-control' %>
 
-        <%= f.label :height %>
+        <%= f.label :height, "Height (Don't worry! This is private information)" %>
         <%= f.text_field :height, class: 'form-control' %>
 
         <%= f.label :bio %>
         <%= f.text_field :bio, class: 'form-control' %>
+
+        <br>
+        <h4 align="center">Type current password before saving</h4>
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %>
+
+        <%= f.label :password_confirmation, "Confirmation" %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
 
         <%= f.submit "Save changes", class: "btn btn-primary" %>
 

@@ -8,7 +8,7 @@
       <!-- Left -->
       <div class="person-box">
         <!-- Profile Image -->
-        <%= image_tag "profile.jpg", class: "prof-img" %>
+        <%= image_tag "profile.png", class: "prof-img" %>
         <br>
         <span class="name"><%= @user.name %></span>
         <br>
@@ -17,7 +17,7 @@
         </span>
         &middot
         <span class="location">
-          San Diego, CA
+          <%= @user.location %>
         </span>
       </div>
 
@@ -25,11 +25,13 @@
 
         <div class="slide">
           
+          <% if !current_user?(@user) %>
           <a href="javascript:;" class="add-buddy-button next">
             <div class="add-buddy">
               <span>+</span>
             </div>
           </a>
+          <% end %>
           <div class="activity-box">
             <% @user.activities.each do |a| %>
               <a href="javascript:;" class="activity-button" id="<%= a.name.delete(' ') %>">
@@ -85,15 +87,17 @@
                     <td>
                       <%= link_to buddy_page_user_path(partnership.partner) do %>
                         <span class="buddy-box">
-                          <%= image_tag 'http://www.northleach.gov.uk/wp-content/uploads/2013/12/blank-avatar-220x220.png', class: 'bud profile-pic' %>
+                          <%= image_tag 'http://www.northleach.gov.uk/wp-content/uploads/2013/12/blank-avatar-220x220.png', class: 'bud profile-pic text-center'%>
                            <br>
                            <%= partnership.partner.name %>
                         </span>
                       <% end %>
                     </td>
+                    <% if current_user?(@user) %>
                     <td>
                       (<%= link_to "remove", partnership, :method => :delete %>)
                     </td>
+                    <% end %>
                   </tr>
                 <% end %>
               </table>

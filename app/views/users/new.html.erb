@@ -5,8 +5,9 @@
   <%= form_for(@user, html: {class:"sign-up"}) do |f| %>
     <div class="slide-container">
       <div class="slide">
-        <h3 class="sign-up-step">ACCOUNT</h3>
+        <h3 class="sign-up-step">CREATE AN ACCOUNT</h3>
           <div>
+            <h4>Note: Password must be at least six characters</h4>
             <%= f.text_field :name, placeholder: "Name" %>
             <%= f.email_field :email, placeholder: "Email" %>
             <%= f.password_field :password, placeholder: "Password" %>
