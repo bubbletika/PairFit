@@ -30,6 +30,17 @@ section {
   padding: 0; 
 }
 
+div.activity-box {
+      text-align: center;
+      vertical-align: top;
+      display: block;
+      margin-top: 1em;
+}
+
+.activity-badge {
+  width: 30%;
+}
+
 .users {
   padding: 30px 10px 30px 10px;
 }
