@@ -1,7 +1,11 @@
+include WoopraRailsSDK
+
 class StaticPagesController < ApplicationController
 
   # GET /static_pages
   # GET /static_pages.json
+  layout "static_page"
+
   def home
     @user = nil
   end
@@ -19,6 +23,13 @@ class StaticPagesController < ApplicationController
   end
   
   def search_results
+    woopra = WoopraTracker.new(request)
+    woopra.config({
+      domain: "pairfit.herokuapp.com",
+      idle_timeout: 15000})
+    woopra.track("a_version_time_elapsed")
+
+    @woopra_code = woopra.js_code
     @users = User.all
   end
   
@@ -39,6 +50,13 @@ class StaticPagesController < ApplicationController
   end
 
   def search_results_B
+    woopra = WoopraTracker.new(request)
+    woopra.config({
+      domain: "pairfit.herokuapp.com",
+      idle_timeout: 15000})
+    woopra.track("b_version_time_elapsed")
+
+    @woopra_code = woopra.js_code
     @users = User.all
   end
 
