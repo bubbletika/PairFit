@@ -31,7 +31,13 @@
               <span>+</span>
             </div>
           </a>
+          <a href="/static_pages/search_results_B/" class="add-buddy-button">
+            <div class="go-back">
+              <span><</span>
+            </div>
+          </a>
           <% end %>
+
           <div class="activity-box">
             <% @user.activities.each do |a| %>
               <a href="javascript:;" class="activity-button" id="<%= a.name.delete(' ') %>">
