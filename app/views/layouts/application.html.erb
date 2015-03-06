@@ -76,7 +76,8 @@
           <%#= link_to static_pages_dashboard_path  do %>
           <%# end %>
           <%#= link_to "Dashboard", dashboard_user_path(current_user), :class=>"link"%>
-          <%= link_to dashboard_user_path(current_user) do %>
+          <%#= link_to dashboard_user_path(current_user) do %>
+          <%= link_to 'javascript:;' do %>
             <span class="link">Dashboard</span>
           <% end %>
         </li>
