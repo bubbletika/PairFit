@@ -1,6 +1,6 @@
 <div class="outer">
   <section>
-    <h1>Find a Buddy</h1>
+    <h1 class="text-center">Find a Buddy</h1>
     <table class="form">
       <tr>
         <td class="left">
@@ -58,6 +58,7 @@
       
     </table>
 
+    <!--
     <%=
       num = rand(0..9)
       if num > 4
@@ -69,19 +70,15 @@
           "View Matches"
         end
       end
-    %>
+    %> -->
 
-
-    <!--
-    <%= link_to static_pages_search_results_path  do %>
-      <span class="link-button">
-        View Matches
-      </span>
+    <%= link_to static_pages_search_results_B_path do %>
+      <div class="text-center">
+        <span class="link-button">
+          View Matches
+        </span>
+      </div>
     <% end %>
-    <%= link_to static_pages_search_results_B_path  do %>
-      <span class="link-button">
-        View Matches
-      </span>
-    <% end %> -->
+
   </section>
 </div>

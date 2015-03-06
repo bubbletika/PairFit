@@ -1,7 +1,7 @@
 <div class="col-xs-4 text-center users">
     <%= link_to user do %>
        <div class="buddy-box" data-toggle="modal" data-target="#user-<%= user.id %>-Modal">
-          <%= image_tag 'http://www.northleach.gov.uk/wp-content/uploads/2013/12/blank-avatar-220x220.png', class: 'bud profile-pic' %>
+          <%= image_tag 'profile.png', class: 'bud profile-pic' %>
           <br>
           <%= user.name %>
        </div>
@@ -20,6 +20,15 @@
           <small align="center">
           	<%= user.bio %>
           </small>
+          <div class="row">
+            <div class="activity-box">
+            <% user.activities.each do |a| %>
+              <a href="javascript:;" class="activity-button" id="<%= a.name.delete(' ') %>">
+                <%= image_tag(a.name.delete(' ') + '.png', class: "activity-badge") %>
+              </a>
+            <% end %>
+            </div>
+          </div>
         </div>
         <div class="modal-footer">
           <%= link_to user do %>
