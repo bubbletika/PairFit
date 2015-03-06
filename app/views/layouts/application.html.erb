@@ -28,46 +28,6 @@
     <script src='fullcalendar/fullcalendar.js'></script>
 </head>
 <body>
-<!--  	<nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-            <#%= image_tag "pear1.png", style:"float: left; margin-right: 10px;", height:"70" %>
-          <#%= link_to 'PairFit', root_url, class: "navbar-brand" %>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <#%= link_to "Profile", static_pages_user_profile_path %>
-                    </li>
-                    <li class="page-scroll">
-                        <#%= link_to static_pages_find_buddy_path  do %>Find a Buddy<#% end %>
-                    </li>
-                    <li class="page-scroll">
-                        <#%= link_to static_pages_buddies_path  do %>Buddies<#% end %>
-                    </li>
-                    <li class="page-scroll">
-                        <#%= link_to static_pages_schedule_path  do %>Schedule<#% end %>
-                    </li>
-          </ul>
-        	<div class="navbar-left">
-        	  Welcome back, 
-        	  <span class="nav-user-name">
-        	    <#%= link_to "Andrew", static_pages_user_profile_path %>
-        	  </span>
-      		  
-        	</div>
-        </div>&lt;!&ndash;/.navbar-collapse &ndash;&gt;
-      </div>
-    </nav>-->
   <div id="sidebar">
     <% if logged_in? %>
       <span id="logged-in-as">Logged in as <%= current_user.name %></span>

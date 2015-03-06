@@ -20,8 +20,8 @@
             <div>
               <%= f.number_field :age, placeholder: "Age" %>
               <%= f.number_field :height, placeholder: "Height (inches)" %>
-              <%= f.number_field :weight, placeholder: "Weight (pouncds)" %>
-              <%= f.select(:gender, [['Male', 'M'], ['Female', 'F'], ['Other', 'O']]) %>
+              <%= f.number_field :weight, placeholder: "Weight (pounds)" %>
+              <%= f.select(:gender, [['Male', 'M'], ['Female', 'F'], ['Other', 'O']], placeholder: "Gender") %>
               <%= f.text_field :location, placeholder: "Location (City or Zipcode)" %>
               <%= f.text_area :bio, placeholder: "Short bio (140 characters)" %>
             </div>

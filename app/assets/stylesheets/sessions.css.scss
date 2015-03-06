@@ -87,7 +87,7 @@ form.sign-up {
     background: rgba(235, 245, 183, 1);
     border: 1px solid rgba(191, 201, 133, 0.35);
     /* border-top: 1px solid white; */
-    color: black;
+    color: #A9A9A9;
   }
 
   select:last-child {
@@ -208,4 +208,14 @@ form.login {
     }
 
   }
+}
+
+textarea {
+    background: #ebf5b7;
+    width: 100%;
+    border-bottom-left-radius: 99999px;
+    border-bottom-right-radius: 99999px;
+    border-bottom: 3px solid #d1d894;
+    border: 1px solid rgba(191, 201, 133, 0.35);
+    text-align: center;
 }
