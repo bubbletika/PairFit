@@ -47,12 +47,12 @@
             <br>
             <br>
             <% if current_user?(@user) %>
-                <%= link_to "Edit activities", edit_activities_user_path(@user), class: "link-button" %>
+                <%= link_to "Edit Activities", edit_activities_user_path(@user), class: "link-button" %>
                 <%= link_to "Edit Profile", edit_user_path(current_user), class: "link-button" %>
             <% end %>
             <% @user.activities.each do |a| %>
               <div class="activity-info" id="<%= a.name.delete(' ') %>">
-                <h5><%= a.name.upcase %></h5>
+                <div class="activity-heading"><h5><%= a.name.upcase %></h5></div>
                 <table>
                   <% a.marks.each do |m| %>
                     <tr>

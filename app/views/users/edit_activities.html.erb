@@ -1,5 +1,17 @@
-<h1>Edit your activities</h1>
-<%= link_to "Go Back", current_user, class: "btn btn-primary"%>
+<div class="title">
+	<div class="row text-center">
+		<h1>Edit Your Activities</h1>
+	</div>
+</div>
+<div class="text-center">
+	<br>
+	<%= link_to current_user do%>
+		<span class="link-button">
+			Back to Profile
+		</span>
+	<% end %>
+</div>
+<div class="text-center">
 <%= form_for @user, url: {action: 'update_activities' }, method: :patch do |f| %>|
   <table>
     <%= f.collection_check_boxes(:activity_ids, Activity.all, :id, :name ) do |b| %>
@@ -11,3 +23,4 @@
   </table>
   <%= f.submit "Submit" %>
 <% end %>
+</div>
