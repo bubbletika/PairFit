@@ -19,6 +19,7 @@ $gray-medium-light: #eaeaea;
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
+  display: none;
 }
 
 /* forms */
@@ -222,16 +223,29 @@ section.success {
 }
 
 .panel {
-    background: white;
+    background: transparent;
     border-radius: 4px;
-    padding: 1em;
-    margin: .5em;
+    margin: 1em;
     margin-top: 1.5em;
 
 }
 
-.panel-body small {
+.panel-heading,{
+    padding: 1em;
+    background-color: #EF4B4B;
+    color: #fff; 
+    border: 3px solid #333;
+}
+
+.panel-heading a,
+.panel-heading:active {
+    color: #fff;
+}
+
+.panel-body {
     color: #333;
+    background: #ebf5b7;
+    border: 3px solid #333;
 }
 
 .right-border {

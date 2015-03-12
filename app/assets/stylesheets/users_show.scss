@@ -24,6 +24,7 @@ div.over {
   z-index: 10;
   display: none;
 }
+
 div.add-confirmation {
   text-align: center;
   font-size: 1.5em;
@@ -60,7 +61,7 @@ div.add-buddy {
   border-radius: 999999px;
   background-color: rgb(48, 48, 48);
   /* border: 3px solid black; */
-  color: rgb(184, 236, 41);
+  color: #fff;
   text-align: center;
   font-weight: bold;
   position: fixed;
