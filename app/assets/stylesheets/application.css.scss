@@ -19,7 +19,8 @@ body, html {
   //padding-top: 50px;
   overflow-x: hidden;
   font-family: 'Varela+Round',Helvetica Neue,Helvetica,Arial,sans-serif;
-  background: url(image-path("background.png")) repeat;
+  background: url(image-path("background.png")) repeat center;
+  margin-bottom: 30px;
 }
 
 h1.top {
