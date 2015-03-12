@@ -16,8 +16,6 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-
-
     if @user.save
       @user.activities.build(params[:activity_ids])
       log_in @user
@@ -44,9 +42,6 @@ class UsersController < ApplicationController
     end
   end
 
-
-
-
   def edit_activities
     @user = User.find(params[:id])
   end
@@ -71,6 +66,14 @@ class UsersController < ApplicationController
 
   def buddy_page
     @buddy = User.find(params[:id])
+  end
+
+  def workouts
+    @user = User.find(params[:id])
+  end
+
+  def add_workout
+    @user = User.find(params[:id])
   end
 
   private

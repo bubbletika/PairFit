@@ -18,7 +18,8 @@
 body, html {
   //padding-top: 50px;
   overflow-x: hidden;
-  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Varela+Round',Helvetica Neue,Helvetica,Arial,sans-serif;
+  background: url("background.png") repeat;
 }
 
 h1.top {
@@ -27,6 +28,15 @@ h1.top {
     color: rgb(232, 255, 100);
     margin: 0;
     font-size: .5em;
+}
+
+div.title {
+  background-color: #ebf5b7;
+  border-bottom: 5px solid #333;
+  font-family: 'Signika', sans-serif;
+  max-width: 100%;
+  padding: 30px;
+  color: #C5242F;
 }
 
 a, a:hover, a:active, a:focus {

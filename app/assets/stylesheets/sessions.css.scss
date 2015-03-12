@@ -8,6 +8,7 @@ div.slide-container {
   vertical-align: top;
   white-space: nowrap;
   width: 100%;
+  margin-top: 2em;
 
   div.slide {
     vertical-align: top;
@@ -20,14 +21,14 @@ div.slide-container {
 input[type=submit] {
   width: 90%;
   padding: .5em 1em;
-  background: #AEB60B;
+  background: #EF4B4B;
   border-radius: 999999px !important;
   /* border: 1px solid white; */
   /* border: 1px solid rgba(191, 201, 133, 0.65); */
   border: none;
-  border-bottom: 3px solid rgba(159, 166, 12, 1);
+  border-bottom: 3px solid #C5242F;
   margin-top: 1em;
-  color: rgb(222, 254, 104);
+  color: #fff;
 }
 
 input[type=submit]:active {
@@ -46,7 +47,7 @@ input:-webkit-autofill:focus {
 }
 
 form.sign-up {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Capriola', sans-serif;
   text-align: center;
   //width: 80%;
   margin: 0 auto;
@@ -114,13 +115,12 @@ form.sign-up {
     border-bottom-right-radius: 99999px;
     /* border-top: 1px solid transparent; */
     /* margin-top: -1px; */
-    border-bottom: 3px solid #d1d894;
   }
 }
 
 
 form.login {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Capriola', sans-serif;
   text-align: center;
   width: 80%;
   margin: 0 auto;
@@ -194,17 +194,17 @@ form.login {
     text-align: center;
     width: 90%;
     padding: .5em 1em;
-    background: #DAE791;
+    background: #C5242F;
     border-radius: 999999px;
     /* border: 1px solid white; */
     /* border: 1px solid rgba(191, 201, 133, 0.65); */
     border: none;
-    border-bottom: 3px solid #C6D185;
+    border-bottom: 3px solid #C5242F;
     margin-top: 1em;
-    color: #defe68;
+    color: #fff;
 
     a {
-      color: rgb(163, 173, 105);
+      color: #fff;
     }
 
   }

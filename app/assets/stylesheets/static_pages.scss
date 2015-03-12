@@ -106,16 +106,17 @@ a:hover {
   color: black;
 }
 
-span.link-button {
-  border-radius: 4px;
+.link-button {
+  border-radius: 99999px;
   padding: 10px 20px;
-  border: 2px solid gray;
-  color: gray;
+  border: 2px solid #C5242F;
+  background-color: #EF4B4B;
+  color: #fff;
   display: inline-block;
 }
-span.link-button:hover {
-  background-color: gray;
-  color: white;
+.link-button:hover {
+  background-color: #EF4B4B;
+  color: #fff;
 }
 
 div.home-bg {
@@ -146,7 +147,6 @@ div.outer {
     height: 100%;
     width: 100%;
     margin: 0 auto;
-    margin-top: 100px;
     
     img.profile-pic {
         border-radius: 50%;

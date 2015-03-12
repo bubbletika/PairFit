@@ -5,7 +5,7 @@
       <h1 class="text-center">Update Your Information</h1>
       <hr>
       <div class="text-center">
-        <%= link_to "Go Back", current_user, class: "btn btn-primary"%>
+        <%= link_to "Go Back", current_user, class: "link-button"%>
       </div>
       <%= form_for(@user) do |f| %>
         <%= render 'shared/error_messages' %>
@@ -38,7 +38,9 @@
         <%= f.label :password_confirmation, "Confirmation" %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-        <%= f.submit "Save changes", class: "btn btn-primary" %>
+        <div class="text-center">
+          <%= f.submit "Save changes", class: "link-button" %>
+        </div>
 
       <% end %> 
     </div>

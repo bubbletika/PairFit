@@ -16,12 +16,14 @@ class User < ActiveRecord::Base
   has_many :inverse_partnerships, :class_name => "Partnership", :foreign_key => "partner_id"
   has_many :inverse_partners, :through => :inverse_partnerships, :source => :user
 
-
   has_many :activities, through: :user_activities
   has_many :user_activities
 
   has_many :marks, through: :user_marks
   has_many :user_marks
+
+  has_many :workouts, through: :user_workouts
+  has_many :user_workouts
 
   def add_activity(activity)
     self.activity_associations.build(activity: activity)
