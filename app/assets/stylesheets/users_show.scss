@@ -114,6 +114,12 @@ div.prof {
         //margin-top: .5em;
       }
 
+      span.age,
+      span.location {
+        font-weight: bold;
+        font-size: 15px;
+      }
+
       .prof-img{
         width:50%;
         max-width: 175px;
